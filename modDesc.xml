@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="72">
+    <author>Bjoern_AkA_FactoryMODS</author>
+    <!--Besonderen dank an  Achimobil für den aPalletAutoload script-->
+    <version>1.0.0.0</version>
+    <title>
+        <en>Koegel Black Edition Trailer</en>
+        <de>Kögel Black Edition Auflieger</de>
+    </title>
+ <description>
+<en>
+<![CDATA[
+Koegel Black Edition 2022 is a trailer for transporting pallets of any kind.
+Price: 39500
+Capacity: 
+- 10 liquid tanks 
+- 18 Bigbags Pallets
+- 30 Bigbags
+- 64 Pallets  normal  
+- 46 Bigsize Pallets
+FS22 Pallet Autoloader Specialization is required to make the autoload work.
+Functions: You can use the U key to select which page is to be opened. The plane can be opened once per side at the front and at the back.
+Then use the Y key to open it.When using the autoloader it is advisable to change the key combination for the autoloader, otherwise not all functions will work properly
+]]>
+</en>
+<de>
+<![CDATA[Koegel Black Edition 2022 ist ein Trailer zum Transportieren von Paletten jeglicher Art.
+Preis:39500
+Kapazität: 
+- 10 Fluessigkeitstanks 
+- 18 Bigbag paletten
+- 30 Bigbags
+- 64 Europaletten normal
+- 46 Europaletten Übergröße
+Damit der Autoloader funktioniert ist der Mod  FS22 Paletten Autoloader Spezialisierung erforderlich.
+Funktionen: Mit der taste U kann ausgewählt werden weche Seite geöffnet werden soll. Es kann pro seite einmal die Plane vorne und hinten geöffnet werden.
+Mit der Taste Y öffnest du diese dann. Benutzt man den Autolaoder ist es ratsam die Tastenkombination für den Autoloader zu ändern, da sonst nicht alle Funktionen richtig funktionieren
+]]> </de> <fr>
+<![CDATA[Koegel Black Edition 2022 est une remorque pour le transport de palettes de toutes sortes.
+Prix : 39500
+Capacité:
+- 10 réservoirs de liquide
+- 18 Palettes Bigbags
+- 30 Bigbags
+- 64 Palettes normales
+- 46 Palettes Bigsize
+La spécialisation FS22 Pallet Autoloader est nécessaire pour que le chargement automatique fonctionne.
+Fonctions : Vous pouvez utiliser la touche U pour sélectionner la page à ouvrir. L'avion peut être ouvert une fois par côté à l'avant et à l'arrière.
+Utilisez ensuite la touche Y pour l'ouvrir. Lorsque vous utilisez le chargeur automatique, il est conseillé de changer la combinaison de touches pour le chargeur automatique, sinon toutes les fonctions ne fonctionneront pas correctement.
+]]> </fr>      
+ </description>
+    <iconFilename>icon_KoegelBlackEditionAutoload.dds</iconFilename>
+    <storeItems>
+        <storeItem   xmlFilename="KoegelBlackEditionAutoload.xml"/>      
+    </storeItems>
+    <multiplayer supported="true"/>
+    <dependencies>
+        <dependency>FS22_aPalletAutoLoader</dependency>
+    </dependencies>
+	<vehicleTypes>
+		<type name="PalletAutoLoaderTrailer" parent="trailer" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="FS22_aPalletAutoLoader.aPalletAutoLoader"/>        
+		</type>
+	</vehicleTypes>
+ 	<axisIcons>
+		<icon name="trailerBaseAirUpandDown" filename="Texturen/trailerBaseAirUpandDown.dds"/>
+		<icon name="wheelBaseAxisUpandDown" filename="Texturen/wheelBaseAxisUpandDown.dds"/>		
+	</axisIcons>   	
+	<l10n>
+         <text name="function_TransportTrailerForPallets">
+            <en>Transpot Trailer for Pallets</en>
+            <de>Transport Auflieger für Paletten</de>
+        </text> 
+         <text name="PalletAutoload_Trailer">
+            <en>Pallet Autoload Trailer</en>
+            <de>Auflieger für Automatisches Laden von Paletten</de>
+        </text>   
+         <text name="Autoload_configuration">
+            <en>Autoload Configuration</en>
+            <de>Konfiguration für Autoload</de>
+        </text>
+          <text name="Autoload_switched_off">
+            <en>Autoload Switched Off</en>
+            <de>Autoload Ausgeschaltet</de>
+        </text>
+          <text name="Autoload_1_Layer">
+            <en>Autoload with 1 Layer</en>
+            <de>Autoload mit 1 lage</de>
+        </text>
+          <text name="Autoload_2_Layers">
+            <en>Autoload with 2 Layer</en>
+            <de>Autoload mit 2 lagen</de>
+        </text>                                                                                    	              
+	</l10n>	
+</modDesc>
+ 

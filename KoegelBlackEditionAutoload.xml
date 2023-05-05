@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="PalletAutoLoaderTrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) Bjoern Aka Factorymods, All Rights Reserved.</annotation>
+    <storeData>
+        <name>
+            <de>Kögel Black Edition Trailer</de>
+            <en>Koegel Black Edition Auflieger</en>
+        </name>
+        <specs>
+            <combination filterCategory="trucks" />
+            <combination xmlFilename="$data/vehicles/krampe/dolly10L/dolly10L.xml"/>
+        </specs>        
+        <functions>
+			<function>$l10n_function_TransportTrailerForPallets</function>
+        </functions>
+		<showInStore>true</showInStore>
+        <image>store_KoegelBlackEditionAutoload.dds</image>
+        <price>39500</price>
+        <lifetime>600</lifetime>
+        <category>misc</category>
+        <brand>Lizard</brand>        
+        <shopTranslationOffset>0 0 0</shopTranslationOffset>
+        <shopRotationOffset>0 0 0</shopRotationOffset>		
+    </storeData>	
+    <base> 
+        <typeDesc>$l10n_PalletAutoload_Trailer</typeDesc>
+        <filename>KoegelBlackEditionAutoload.i3d</filename>
+        <size width="3.5" length="14.2" height="4.15" lengthOffset="0.05" />
+        <components>
+            <component centerOfMass="0.4 0.4 0" solverIterationCount="10" mass="7000" />                      
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+        <mapHotspot type="TRAILER" />
+    </base>
+	
+    <configurationSets title="$l10n_Autoload_configuration">
+        <configurationSet name="$l10n_Autoload_switched_off">
+            <configuration name="aPalletAutoLoader" index="3"/>
+        </configurationSet>
+        <configurationSet name="$l10n_Autoload_1_Layer">
+            <configuration name="aPalletAutoLoader" index="1"/>
+        </configurationSet>
+        <configurationSet name="$l10n_Autoload_2_Layers">
+            <configuration name="aPalletAutoLoader" index="2"/>
+        </configurationSet>	      	
+    </configurationSets>		
+	
+
+
+	<aPalletAutoLoader>
+		<aPalletAutoLoaderConfigurations>
+			<aPalletAutoLoaderConfiguration maxObjects="32" useBales="false" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-4 -1.2 0" UnloadLeftOffset="4 -1.2 0" UnloadBackOffset="0 -1.2 -14.2">
+				<trigger node="triggerNode"/>
+				<pickupTriggers>
+					<pickupTrigger node="pickupTriggerLeft"/>
+					<pickupTrigger node="pickupTriggerRight"/>
+				</pickupTriggers>
+                <loadArea baseNode="loadingBase" leftRightCornerOffset="1.2 0 0" lenght="13.9" width="2.45" height="2.8"/>
+			</aPalletAutoLoaderConfiguration>
+			<aPalletAutoLoaderConfiguration maxObjects="64" useBales="false" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-4 -1.2 0" UnloadLeftOffset="4 -1.2 0" UnloadBackOffset="0 -1.2 -14.2">
+				<trigger node="triggerNode"/>
+				<pickupTriggers>
+					<pickupTrigger node="pickupTriggerLeft"/>
+					<pickupTrigger node="pickupTriggerRight"/>
+				</pickupTriggers>
+                <loadArea baseNode="loadingBase" leftRightCornerOffset="1.2 0 0" lenght="13.9" width="2.45" height="2.8"/>
+			</aPalletAutoLoaderConfiguration> 
+          <aPalletAutoLoaderConfiguration />                     
+		</aPalletAutoLoaderConfigurations>       
+	</aPalletAutoLoader>
+	
+	
+    <wheels>
+        <wheelConfigurations >
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" >
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="true" hasTireTracks="true" configId="truckTrailerKrone">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.1" repr="WheelLeftFront" forcePointRatio="0.5" initialCompression="25" suspTravel="0.075" spring="50" damper="35" yOffset="-0.059"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="false" hasTireTracks="true" configId="truckTrailerKrone">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.1" repr="WheelRightFront" forcePointRatio="0.5" initialCompression="25" suspTravel="0.075" spring="50" damper="35" yOffset="-0.059"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" configId="truckTrailerKrone">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.1" repr="WheelLeftMiddle" forcePointRatio="0.5" initialCompression="25" suspTravel="0.075" spring="50" damper="35" yOffset="-0.059"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" configId="truckTrailerKrone">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.1" repr="WheelRightMiddle" forcePointRatio="0.5" initialCompression="25" suspTravel="0.075" spring="50" damper="35" yOffset="-0.059"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" configId="truckTrailerKrone">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.1" repr="WheelLeftBack" forcePointRatio="0.5" initialCompression="25" suspTravel="0.075" spring="50" damper="35" yOffset="-0.059"/>               
+                        <wheelChock parkingNode="wheelChock01_01"/>
+                        <wheelChock parkingNode="wheelChock01_02" isInverted="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" configId="truckTrailerKrone">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.1" repr="WheelRightBack" forcePointRatio="0.5" initialCompression="25" suspTravel="0.075" spring="50" damper="35" yOffset="-0.059"/>	                       
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+								
+        </wheelConfigurations>
+
+    </wheels>
+	
+
+	
+    <animations>
+        <animation name="moveSupport">
+            <part node="0|4|0" startTime="0.5" endTime="1.0" startTrans="0 0 -0.375" endTrans="0 0 0.02" />
+        </animation>
+		
+                                                   <!-- Plane links und Bretter links "VORNE" 	-->
+        <animation name="coverAnimationLeftFront">                                                                                      	
+            <part node="0|0|1"   startTime="0.0" endTime="0.5" startVisibility="true" endVisibility="false"/>                         	<!-- Plane Öffnen Linke seite  -->
+            <part node="0|0|9"   startTime="0.5" endTime="0.9" startVisibility="false" endVisibility="true"/>                                                       
+            <part node="0|0|6|0" startTime="1.0" endTime="1.5" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 1 entnehmen -->			
+            <part node="0|0|6|16|0" startTime="1.0" endTime="1.5" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 1 im fach -->				
+            <part node="0|0|6|1" startTime="1.0" endTime="1.8" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 2 entnehmen -->			
+            <part node="0|0|6|16|1" startTime="1.0" endTime="1.8" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 2 im fach -->
+            <part node="0|0|6|2" startTime="1.0" endTime="2.1" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 3 entnehmen -->			
+            <part node="0|0|6|16|2" startTime="1.0" endTime="2.1" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 3 im fach -->
+            <part node="0|0|6|3" startTime="1.0" endTime="2.4" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 4 entnehmen -->			
+            <part node="0|0|6|16|3" startTime="1.0" endTime="2.4" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 4 im fach -->
+            <part node="00|0|6|4" startTime="1.0" endTime="2.7" startVisibility="true" endVisibility="false"/>                          <!-- Alubretter 5 entnehmen -->	
+            <part node="0|0|6|16|4" startTime="1.0" endTime="2.7" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 5 im fach --> 
+            <part node="0|0|6|5" startTime="1.0" endTime="3.0" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 6 entnehmen -->	
+            <part node="0|0|6|16|5" startTime="1.0" endTime="3.0" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 6 im fach --> 
+            <part node="0|0|6|6" startTime="1.0" endTime="3.3" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 7 entnehmen -->	
+            <part node="0|0|6|16|6" startTime="1.0" endTime="3.3" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 7 im fach --> 
+            <part node="0|0|6|7" startTime="1.0" endTime="3.6" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 8 entnehmen -->
+            <part node="0|0|6|16|7" startTime="1.0" endTime="3.6" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 8 im fach --> 
+            <part node="0|0|6|8" startTime="1.0" endTime="3.9" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 9 entnehmen -->
+            <part node="0|0|6|16|8" startTime="1.0" endTime="3.9" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 9 im fach --> 
+            <part node="0|0|6|9" startTime="1.0" endTime="4.2" startVisibility="true" endVisibility="false"/>                           <!-- Alubretter 10 entnehmen -->
+            <part node="0|0|6|16|9" startTime="1.0" endTime="4.2" startVisibility="false" endVisibility="true"/>                        <!-- Alubretter 10 im fach --> 
+            <part node="0|0|6|10" startTime="1.0" endTime="4.5" startVisibility="true" endVisibility="false"/>                          <!-- Alubretter 11 entnehmen -->
+            <part node="0|0|6|16|10" startTime="1.0" endTime="4.5" startVisibility="false" endVisibility="true"/>                       <!-- Alubretter 11 im fach --> 
+            <part node="0|0|6|11" startTime="1.0" endTime="4.8" startVisibility="true" endVisibility="false"/>                          <!-- Alubretter 12 entnehmen -->
+            <part node="0|0|6|16|11" startTime="1.0" endTime="4.8" startVisibility="false" endVisibility="true"/>                       <!-- Alubretter 12 im fach --> 
+            <part node="0|0|6|12" startTime="1.0" endTime="5.1" startVisibility="true" endVisibility="false"/>                          <!-- Alubretter 13 entnehmen -->
+            <part node="0|0|6|16|12" startTime="1.0" endTime="5.1" startVisibility="false" endVisibility="true"/>                       <!-- Alubretter 13 im fach --> 
+            <part node="0|0|6|13" startTime="1.0" endTime="5.4" startVisibility="true" endVisibility="false"/>                          <!-- Alubretter 14 entnehmen -->
+            <part node="0|0|6|16|13" startTime="1.0" endTime="5.4" startVisibility="false" endVisibility="true"/>                       <!-- Alubretter 14 im fach --> 
+            <part node="0|0|6|14" startTime="1.0" endTime="5.7" startVisibility="true" endVisibility="false"/>                          <!-- Alubretter 15 entnehmen -->
+            <part node="0|0|6|16|14" startTime="1.0" endTime="5.7" startVisibility="false" endVisibility="true"/>                       <!-- Alubretter 15 im fach --> 
+            <part node="0|0|6|15" startTime="1.0" endTime="6.0" startVisibility="true" endVisibility="false"/>                          <!-- Alubretter 16 entnehmen -->
+            <part node="0|0|6|16|15" startTime="1.0" endTime="6.0" startVisibility="false" endVisibility="true"/>                       <!-- Alubretter 16 im fach --> 
+
+                                              <!-- Runge Links 1-3 zur Seite schieben	-->
+
+            <part node="0|0|4|0" startTime="6.1" endTime="7.0"  startTrans="0 0 0" endTrans="0 0 3" />      <!-- Runge 1 zur Seite schieben	-->
+            <part node="0|0|4|1" startTime="7.0" endTime="8.0"  startTrans="0 0 0"  endTrans="0 0 6" />     <!-- Runge 2 zur Seite schieben	-->
+            <part node="0|0|4|2" startTime="8.0" endTime="9.0"  startTrans="0 0 0"  endTrans="0 0 9" />    <!-- Runge 3 zur Seite schieben	-->	
+
+                                             <!-- Collis Links zur Seite schieben	-->
+
+            <part node="0|0|1|2|0" startTime="6.1" endTime="6.3"  startTrans="0 1.888 0"  endTrans="0 1.888 0" /> 
+            <part node="0|0|1|2|1" startTime="6.3" endTime="6.7"  startTrans="0 0 0"  endTrans="0 1.903 0" />
+            <part node="0|0|1|2|2" startTime="6.7" endTime="7.1"  startTrans="0 0 0"  endTrans="0 3.723 0" />
+            <part node="0|0|1|2|3" startTime="7.1" endTime="7.4"  startTrans="0 0 0"  endTrans="0 5.579 0" />
+            <part node="0|0|1|2|4" startTime="7.4" endTime="7.7"  startTrans="0 0 0"  endTrans="0 7.37 0" />
+            <part node="0|0|1|2|5" startTime="7.7" endTime="8.1"  startTrans="0 0 0"  endTrans="0 9.17 0" />
+            <part node="0|0|1|2|6" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 11.106 0" />
+            <part node="0|0|1|2|7" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 11.722 0" />
+
+                                                       <!-- Sounds	-->
+
+            <sound template="fabricCover1"    startTime="0.01" direction="0"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="6.1"  direction="1"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="7.0"  direction="0"  volumeScale="5"   pitchScale="0.7"/>
+            <sound template="slideOpen"       startTime="8.0"  direction="0"  volumeScale="6"   pitchScale="0.5"/>
+            <sound template="palletsFillWood" startTime="1.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="1.8"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.1"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.4"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.7"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.3"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.6"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.9"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="4.1"                 volumeScale="3.5" pitchScale="1"/>
+        </animation>
+
+                                                 <!-- Plane links und Bretter links "Hinten" 	-->
+        <animation name="coverAnimationLeftBack">                                                                                      	
+            <part node="0|0|1"   startTime="0.0" endTime="0.5" startVisibility="true" endVisibility="false"/>                      	<!-- Plane Öffnen Linke seite  -->
+            <part node="0|0|10"   startTime="0.5" endTime="0.9" startVisibility="false" endVisibility="true"/>                     <!-- Plane Öffnen Linke seite  -->            
+            <part node="0|0|6|0" startTime="1.0" endTime="1.5" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 1 entnehmen -->			
+            <part node="0|0|6|16|0" startTime="1.0" endTime="1.5" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 1 im fach -->				
+            <part node="0|0|6|1" startTime="1.0" endTime="1.8" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 2 entnehmen -->			
+            <part node="0|0|6|16|1" startTime="1.0" endTime="1.8" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 2 im fach -->
+            <part node="0|0|6|2" startTime="1.0" endTime="2.1" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 3 entnehmen -->			
+            <part node="0|0|6|16|2" startTime="1.0" endTime="2.1" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 3 im fach -->
+            <part node="0|0|6|3" startTime="1.0" endTime="2.4" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 4 entnehmen -->			
+            <part node="0|0|6|16|3" startTime="1.0" endTime="2.4" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 4 im fach -->
+            <part node="00|0|6|4" startTime="1.0" endTime="2.7" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 5 entnehmen -->	
+            <part node="0|0|6|16|4" startTime="1.0" endTime="2.7" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 5 im fach --> 
+            <part node="0|0|6|5" startTime="1.0" endTime="3.0" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 6 entnehmen -->	
+            <part node="0|0|6|16|5" startTime="1.0" endTime="3.0" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 6 im fach --> 
+            <part node="0|0|6|6" startTime="1.0" endTime="3.3" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 7 entnehmen -->	
+            <part node="0|0|6|16|6" startTime="1.0" endTime="3.3" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 7 im fach --> 
+            <part node="0|0|6|7" startTime="1.0" endTime="3.6" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 8 entnehmen -->
+            <part node="0|0|6|16|7" startTime="1.0" endTime="3.6" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 8 im fach --> 
+            <part node="0|0|6|8" startTime="1.0" endTime="3.9" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 9 entnehmen -->
+            <part node="0|0|6|16|8" startTime="1.0" endTime="3.9" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 9 im fach --> 
+            <part node="0|0|6|9" startTime="1.0" endTime="4.2" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 10 entnehmen -->
+            <part node="0|0|6|16|9" startTime="1.0" endTime="4.2" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 10 im fach --> 
+            <part node="0|0|6|10" startTime="1.0" endTime="4.5" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 11 entnehmen -->
+            <part node="0|0|6|16|10" startTime="1.0" endTime="4.5" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 11 im fach --> 
+            <part node="0|0|6|11" startTime="1.0" endTime="4.8" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 12 entnehmen -->
+            <part node="0|0|6|16|11" startTime="1.0" endTime="4.8" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 12 im fach --> 
+            <part node="0|0|6|12" startTime="1.0" endTime="5.1" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 13 entnehmen -->
+            <part node="0|0|6|16|12" startTime="1.0" endTime="5.1" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 13 im fach --> 
+            <part node="0|0|6|13" startTime="1.0" endTime="5.4" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 14 entnehmen -->
+            <part node="0|0|6|16|13" startTime="1.0" endTime="5.4" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 14 im fach --> 
+            <part node="0|0|6|14" startTime="1.0" endTime="5.7" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 15 entnehmen -->
+            <part node="0|0|6|16|14" startTime="1.0" endTime="5.7" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 15 im fach --> 
+            <part node="0|0|6|15" startTime="1.0" endTime="6.0" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 16 entnehmen -->
+            <part node="0|0|6|16|15" startTime="1.0" endTime="6.0" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 16 im fach --> 
+
+                                                   <!-- Runge Links 1-3 zur Seite schieben	-->
+
+            <part node="0|0|4|2" startTime="6.1" endTime="7.0"  startTrans="0 0 0" endTrans="0 0 -3" />        <!-- Runge 1 zur Seite schieben	-->
+            <part node="0|0|4|1" startTime="7.0" endTime="8.0"  startTrans="0 0 0"  endTrans="0 0 -6" />      <!-- Runge 2 zur Seite schieben	-->
+            <part node="0|0|4|0" startTime="8.0" endTime="9.0"  startTrans="0 0 0"  endTrans="0 0 -9" />      <!-- Runge 3 zur Seite schieben	-->	
+
+                                                   <!-- Collis Links zur Seite schieben "Hinten"	-->
+
+            <part node="0|0|1|2|0" startTime="6.1" endTime="6.3"  startTrans="0 1.888 0"  endTrans="0 -9.799 0" /> 
+            <part node="0|0|1|2|1" startTime="6.3" endTime="6.7"  startTrans="0 0 0"  endTrans="0 -9.845 0" />
+            <part node="0|0|1|2|2" startTime="6.7" endTime="7.1"  startTrans="0 0 0"  endTrans="0 -7.937 0" />
+            <part node="0|0|1|2|3" startTime="7.1" endTime="7.4"  startTrans="0 0 0"  endTrans="0 -6.041 0" />
+            <part node="0|0|1|2|4" startTime="7.4" endTime="7.7"  startTrans="0 0 0"  endTrans="0 -4.281 0" />
+            <part node="0|0|1|2|5" startTime="7.7" endTime="8.1"  startTrans="0 0 0"  endTrans="0 -2.506 0" />
+            <part node="0|0|1|2|6" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 -0.728 0" />
+            <part node="0|0|1|2|7" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 0 0" />
+
+                                                                     <!-- Sounds	-->
+
+            <sound template="fabricCover1"    startTime="0.01" direction="0"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="6.1"  direction="1"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="7.0"  direction="0"  volumeScale="5"   pitchScale="0.7"/>
+            <sound template="slideOpen"       startTime="8.0"  direction="0"  volumeScale="6"   pitchScale="0.5"/>
+            <sound template="palletsFillWood" startTime="1.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="1.8"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.1"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.4"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.7"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.3"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.6"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.9"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="4.1"                 volumeScale="3.5" pitchScale="1"/>
+        </animation>
+
+                                              <!-- Plane rechts und Bretter rechts "VORNE" 	-->
+
+        <animation name="coverAnimationRightFront">                                                                                      	
+            <part node="0|0|0"   startTime="0.0" endTime="0.5" startVisibility="true" endVisibility="false"/>                      	<!-- Plane Öffnen Linke seite  -->
+            <part node="0|0|11"   startTime="0.5" endTime="0.9" startVisibility="false" endVisibility="true"/>                     <!-- Plane Öffnen Linke seite  -->            
+            <part node="0|0|7|0" startTime="1.0" endTime="1.5" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 1 entnehmen -->			
+            <part node="0|0|7|16|0" startTime="1.0" endTime="1.5" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 1 im fach -->				
+            <part node="0|0|7|1" startTime="1.0" endTime="1.8" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 2 entnehmen -->			
+            <part node="0|0|7|16|1" startTime="1.0" endTime="1.8" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 2 im fach -->
+            <part node="0|0|7|2" startTime="1.0" endTime="2.1" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 3 entnehmen -->			
+            <part node="0|0|7|16|2" startTime="1.0" endTime="2.1" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 3 im fach -->
+            <part node="0|0|7|3" startTime="1.0" endTime="2.4" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 4 entnehmen -->			
+            <part node="0|0|7|16|3" startTime="1.0" endTime="2.4" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 4 im fach -->
+            <part node="0|0|7|4" startTime="1.0" endTime="2.7" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 5 entnehmen -->	
+            <part node="0|0|7|16|4" startTime="1.0" endTime="2.7" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 5 im fach --> 
+            <part node="0|0|7|5" startTime="1.0" endTime="3.0" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 6 entnehmen -->	
+            <part node="0|0|7|16|5" startTime="1.0" endTime="3.0" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 6 im fach --> 
+            <part node="0|0|7|6" startTime="1.0" endTime="3.3" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 7 entnehmen -->	
+            <part node="0|0|7|16|6" startTime="1.0" endTime="3.3" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 7 im fach --> 
+            <part node="0|0|7|7" startTime="1.0" endTime="3.6" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 8 entnehmen -->
+            <part node="0|0|7|16|7" startTime="1.0" endTime="3.6" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 8 im fach --> 
+            <part node="0|0|7|8" startTime="1.0" endTime="3.9" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 9 entnehmen -->
+            <part node="0|0|7|16|8" startTime="1.0" endTime="3.9" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 9 im fach --> 
+            <part node="0|0|7|9" startTime="1.0" endTime="4.2" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 10 entnehmen -->
+            <part node="0|0|7|16|9" startTime="1.0" endTime="4.2" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 10 im fach --> 
+            <part node="0|0|7|10" startTime="1.0" endTime="4.5" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 11 entnehmen -->
+            <part node="0|0|7|16|10" startTime="1.0" endTime="4.5" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 11 im fach --> 
+            <part node="0|0|7|11" startTime="1.0" endTime="4.8" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 12 entnehmen -->
+            <part node="0|0|7|16|11" startTime="1.0" endTime="4.8" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 12 im fach --> 
+            <part node="0|0|7|12" startTime="1.0" endTime="5.1" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 13 entnehmen -->
+            <part node="0|0|7|16|12" startTime="1.0" endTime="5.1" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 13 im fach --> 
+            <part node="0|0|7|13" startTime="1.0" endTime="5.4" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 14 entnehmen -->
+            <part node="0|0|7|16|13" startTime="1.0" endTime="5.4" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 14 im fach --> 
+            <part node="0|0|7|14" startTime="1.0" endTime="5.7" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 15 entnehmen -->
+            <part node="0|0|7|16|14" startTime="1.0" endTime="5.7" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 15 im fach --> 
+            <part node="0|0|7|15" startTime="1.0" endTime="6.0" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 16 entnehmen -->
+            <part node="0|0|7|16|15" startTime="1.0" endTime="6.0" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 16 im fach --> 
+
+                                                     <!-- Runge Rechts 1-3 zur Seite schieben	-->
+
+            <part node="0|0|5|0" startTime="6.1" endTime="7.0"  startTrans="0 0 0" endTrans="0 0 3" />        <!-- Runge 1 zur Seite schieben	-->
+            <part node="0|0|5|1" startTime="7.0" endTime="8.0"  startTrans="0 0 0"  endTrans="0 0 6" />      <!-- Runge 2 zur Seite schieben	-->
+            <part node="0|0|5|2" startTime="8.0" endTime="9.0"  startTrans="0 0 0"  endTrans="0 0 9" />      <!-- Runge 3 zur Seite schieben	-->	
+
+                                               <!-- Collis rechts zur Seite schieben "Vorne"	-->
+
+            <part node="0|0|0|2|0" startTime="6.1" endTime="6.3"  startTrans="0 1.916 0"  endTrans="0 1.916 0" /> 
+            <part node="0|0|0|2|1" startTime="6.3" endTime="6.7"  startTrans="0 0 0"  endTrans="0 1.903 0" />
+            <part node="0|0|0|2|2" startTime="6.7" endTime="7.1"  startTrans="0 0 0"  endTrans="0 3.723 0" />
+            <part node="0|0|0|2|3" startTime="7.1" endTime="7.4"  startTrans="0 0 0"  endTrans="0 5.579 0" />
+            <part node="0|0|0|2|4" startTime="7.4" endTime="7.7"  startTrans="0 0 0"  endTrans="0 7.37 0" />
+            <part node="0|0|0|2|5" startTime="7.7" endTime="8.1"  startTrans="0 0 0"  endTrans="0 9.17 0" />
+            <part node="0|0|0|2|6" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 11.106 0" />
+            <part node="0|0|0|2|7" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 11.722 0" />
+
+                                                         <!-- Sounds	-->
+
+            <sound template="fabricCover1"    startTime="0.01" direction="0"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="6.1"  direction="1"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="7.0"  direction="0"  volumeScale="5"   pitchScale="0.7"/>
+            <sound template="slideOpen"       startTime="8.0"  direction="0"  volumeScale="6"   pitchScale="0.5"/>
+            <sound template="palletsFillWood" startTime="1.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="1.8"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.1"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.4"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.7"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.3"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.6"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.9"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="4.1"                 volumeScale="3.5" pitchScale="1"/>
+        </animation>
+
+                                                 <!-- Plane rechts und Bretter rechts "Hinten" 	-->
+
+        <animation name="coverAnimationRightBack">                                                                                      	
+            <part node="0|0|0"   startTime="0.0" endTime="0.5" startVisibility="true" endVisibility="false"/>                      	<!-- Plane Öffnen Linke seite  -->
+            <part node="0|0|12"   startTime="0.5" endTime="0.9" startVisibility="false" endVisibility="true"/>                     <!-- Plane Öffnen Linke seite  -->            
+            <part node="0|0|7|0" startTime="1.0" endTime="1.5" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 1 entnehmen -->			
+            <part node="0|0|7|16|0" startTime="1.0" endTime="1.5" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 1 im fach -->				
+            <part node="0|0|7|1" startTime="1.0" endTime="1.8" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 2 entnehmen -->			
+            <part node="0|0|7|16|1" startTime="1.0" endTime="1.8" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 2 im fach -->
+            <part node="0|0|7|2" startTime="1.0" endTime="2.1" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 3 entnehmen -->			
+            <part node="0|0|7|16|2" startTime="1.0" endTime="2.1" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 3 im fach -->
+            <part node="0|0|7|3" startTime="1.0" endTime="2.4" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 4 entnehmen -->			
+            <part node="0|0|7|16|3" startTime="1.0" endTime="2.4" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 4 im fach -->
+            <part node="0|0|7|4" startTime="1.0" endTime="2.7" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 5 entnehmen -->	
+            <part node="0|0|7|16|4" startTime="1.0" endTime="2.7" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 5 im fach --> 
+            <part node="0|0|7|5" startTime="1.0" endTime="3.0" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 6 entnehmen -->	
+            <part node="0|0|7|16|5" startTime="1.0" endTime="3.0" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 6 im fach --> 
+            <part node="0|0|7|6" startTime="1.0" endTime="3.3" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 7 entnehmen -->	
+            <part node="0|0|7|16|6" startTime="1.0" endTime="3.3" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 7 im fach --> 
+            <part node="0|0|7|7" startTime="1.0" endTime="3.6" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 8 entnehmen -->
+            <part node="0|0|7|16|7" startTime="1.0" endTime="3.6" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 8 im fach --> 
+            <part node="0|0|7|8" startTime="1.0" endTime="3.9" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 9 entnehmen -->
+            <part node="0|0|7|16|8" startTime="1.0" endTime="3.9" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 9 im fach --> 
+            <part node="0|0|7|9" startTime="1.0" endTime="4.2" startVisibility="true" endVisibility="false"/>                       <!-- Alubretter 10 entnehmen -->
+            <part node="0|0|7|16|9" startTime="1.0" endTime="4.2" startVisibility="false" endVisibility="true"/>                    <!-- Alubretter 10 im fach --> 
+            <part node="0|0|7|10" startTime="1.0" endTime="4.5" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 11 entnehmen -->
+            <part node="0|0|7|16|10" startTime="1.0" endTime="4.5" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 11 im fach --> 
+            <part node="0|0|7|11" startTime="1.0" endTime="4.8" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 12 entnehmen -->
+            <part node="0|0|7|16|11" startTime="1.0" endTime="4.8" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 12 im fach --> 
+            <part node="0|0|7|12" startTime="1.0" endTime="5.1" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 13 entnehmen -->
+            <part node="0|0|7|16|12" startTime="1.0" endTime="5.1" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 13 im fach --> 
+            <part node="0|0|7|13" startTime="1.0" endTime="5.4" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 14 entnehmen -->
+            <part node="0|0|7|16|13" startTime="1.0" endTime="5.4" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 14 im fach --> 
+            <part node="0|0|7|14" startTime="1.0" endTime="5.7" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 15 entnehmen -->
+            <part node="0|0|7|16|14" startTime="1.0" endTime="5.7" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 15 im fach --> 
+            <part node="0|0|7|15" startTime="1.0" endTime="6.0" startVisibility="true" endVisibility="false"/>                      <!-- Alubretter 16 entnehmen -->
+            <part node="0|0|7|16|15" startTime="1.0" endTime="6.0" startVisibility="false" endVisibility="true"/>                   <!-- Alubretter 16 im fach --> 
+
+                                                  <!-- Runge Rechts 1-3 zur Seite schieben	-->
+
+            <part node="0|0|5|2" startTime="6.1" endTime="7.0"  startTrans="0 0 0" endTrans="0 0 -3" />        <!-- Runge 1 zur Seite schieben	-->
+            <part node="0|0|5|1" startTime="7.0" endTime="8.0"  startTrans="0 0 0"  endTrans="0 0 -6" />      <!-- Runge 2 zur Seite schieben	-->
+            <part node="0|0|5|0" startTime="8.0" endTime="9.0"  startTrans="0 0 0"  endTrans="0 0 -9" />      <!-- Runge 3 zur Seite schieben	-->	
+
+                                                  <!-- Collis rechts zur Seite schieben "Hinten"	-->
+
+            <part node="0|0|0|2|0" startTime="6.1" endTime="6.3"  startTrans="0 1.916 0"  endTrans="0 -9.921 0" /> 
+            <part node="0|0|0|2|1" startTime="6.3" endTime="6.7"  startTrans="0 0 0"  endTrans="0 -9.928 0" />
+            <part node="0|0|0|2|2" startTime="6.7" endTime="7.1"  startTrans="0 0 0"  endTrans="0 -8.131 0" />
+            <part node="0|0|0|2|3" startTime="7.1" endTime="7.4"  startTrans="0 0 0"  endTrans="0 -6.229 0" />
+            <part node="0|0|0|2|4" startTime="7.4" endTime="7.7"  startTrans="0 0 0"  endTrans="0 -4.391 0" />
+            <part node="0|0|0|2|5" startTime="7.7" endTime="8.1"  startTrans="0 0 0"  endTrans="0 -2.586 0" />
+            <part node="0|0|0|2|6" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 -0.755 0" />
+            <part node="0|0|0|2|7" startTime="8.1" endTime="8.4"  startTrans="0 0 0"  endTrans="0 0 0" />
+
+                                                                 <!-- Sounds	-->
+
+            <sound template="fabricCover1"    startTime="0.01" direction="0"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="6.1"  direction="1"  volumeScale="5"   pitchScale="1"/>
+            <sound template="slideOpen"       startTime="7.0"  direction="0"  volumeScale="5"   pitchScale="0.7"/>
+            <sound template="slideOpen"       startTime="8.0"  direction="0"  volumeScale="6"   pitchScale="0.5"/>
+            <sound template="palletsFillWood" startTime="1.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="1.8"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.1"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.4"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="2.7"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.0"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.3"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.6"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="3.9"                 volumeScale="3.5" pitchScale="1"/>
+            <sound template="palletsFillWood" startTime="4.1"                 volumeScale="3.5" pitchScale="1"/>
+        </animation>
+
+        <animation name="folding">
+		    <part node="0|0|2|0|0" startTime="2.95" endTime="3" endRot="0 0 0" startRot="0 68 0" tangentType="spline"/>  
+		    <part node="0|0|2|0|1" startTime="2.95" endTime="3" endRot="0 0 0" startRot="0 68 0" tangentType="spline"/>                        			 
+ 			<part node="0|0|2|0" startTime="0.05" endTime="3" endRot="0 0 0" startRot="0 -245 0" tangentType="spline"/> 
+		    <part node="0|0|3|0|0" startTime="3.95" endTime="4" endRot="0 0 0" startRot="0 -68 0" tangentType="spline"/>  
+		    <part node="0|0|3|0|1" startTime="3.95" endTime="4" endRot="0 0 0" startRot="0 -68 0" tangentType="spline"/>                        			 
+ 			<part node="0|0|3|0" startTime="1" endTime="4" endRot="0 0 0" startRot="0 245 0" tangentType="spline"/>
+
+            <sound template="metalDoorsLoop"  startTime="0.01" endTime="2"    volumeScale="3.5" pitchScale="0.9" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="metalDoorsLoop"  startTime="1"    endTime="2.99" volumeScale="4.4" pitchScale="0.7" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hingeMedium"     startTime="1"                   volumeScale="2.8" pitchScale="0.7"/>
+            <sound template="metalDoorsClose" startTime="2"    direction="1"  volumeScale="3"   pitchScale="0.9"/>
+            <sound template="metalClose"      startTime="2"    direction="1"  volumeScale="3"   pitchScale="0.9"/>
+            <sound template="clackVar1"       startTime="2"    direction="1"  volumeScale="1"   pitchScale="1.1"/>
+            <sound template="cylinderPunch"   startTime="2"    direction="1"  volumeScale="0.4" pitchScale="1.5"/>
+            <sound template="metalDoorsClose" startTime="2.99" direction="1"  volumeScale="3"   pitchScale="0.7"/>
+            <sound template="metalClose"      startTime="2.99" direction="1"  volumeScale="2"   pitchScale="1.7"/>
+            <sound template="clackVar1"       startTime="2.99" direction="1"  volumeScale="1.7" pitchScale="1.3"/>
+            <sound template="cylinderPunch"   startTime="2.99" direction="1"  volumeScale="0.4" pitchScale="1"/>
+            <sound template="clackVar6"       startTime="1"    direction="-1" volumeScale="2.3" pitchScale="1"/>
+            <sound template="cylinderPunch"   startTime="1"    direction="-1" volumeScale="0.5" pitchScale="1.6"/>
+            <sound template="sheetImp02"      startTime="1"    direction="-1" volumeScale="1.3" pitchScale="1.4"/>
+            <sound template="clackVar6"       startTime="0.01" direction="-1" volumeScale="2.3" pitchScale="0.8"/>
+            <sound template="cylinderPunch"   startTime="0.01" direction="-1" volumeScale="0.5" pitchScale="1.3"/>
+            <sound template="sheetImp02"      startTime="0.01" direction="-1" volumeScale="1.3" pitchScale="1.8"/>
+            <sound template="clackVar3"       startTime="2.99" direction="-1" volumeScale="1.3" pitchScale="1.8"/>
+            <sound template="clackVar3"       startTime="2.01" direction="-1" volumeScale="1.3" pitchScale="1.4"/>
+        </animation>
+    </animations>	
+
+    <trailer>
+        <trailerConfigurations>
+            <trailerConfiguration>
+                <trailer infoText="$l10n_info_openCurtain">
+                    <tipSide name="$l10n_info_curtainLeftFront" dischargeNodeIndex="1">
+                        <manualTipToggle enabled="true" stopOnDeactivate="false" inputActionTextPos="$l10n_action_curtainSideOpen" inputActionTextNeg="$l10n_action_curtainSideClose"/>
+                        <animation name="coverAnimationLeftFront" speedScale="1.0" />
+                    </tipSide>
+                    <tipSide name="$l10n_info_curtainLeftBack" dischargeNodeIndex="2">
+                        <manualTipToggle enabled="true" stopOnDeactivate="false" inputActionTextPos="$l10n_action_curtainSideOpen" inputActionTextNeg="$l10n_action_curtainSideClose"/>
+                        <animation name="coverAnimationLeftBack" speedScale="1.0" />
+                    </tipSide>
+                    <tipSide name="$l10n_info_curtainRightFront" dischargeNodeIndex="3">
+                        <manualTipToggle enabled="true" stopOnDeactivate="false" inputActionTextPos="$l10n_action_curtainSideOpen" inputActionTextNeg="$l10n_action_curtainSideClose"/>
+                        <animation name="coverAnimationRightFront" speedScale="1.0" />
+                    </tipSide>
+                    <tipSide name="$l10n_info_curtainRightBack" dischargeNodeIndex="4">
+                        <manualTipToggle enabled="true" stopOnDeactivate="false" inputActionTextPos="$l10n_action_curtainSideOpen" inputActionTextNeg="$l10n_action_curtainSideClose"/>
+                        <animation name="coverAnimationRightBack" speedScale="1.0" />
+                    </tipSide>
+                </trailer>
+            </trailerConfiguration>
+        </trailerConfigurations>
+    </trailer>
+
+    <cylindered>
+		<movingTools>
+			<movingTool node="0>0|6" playSound="true" wheelIndices="1 2 3 4 5 6">
+                <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="true" mouseSpeedFactor="0.2" iconName="trailerBaseAirUpandDown" />
+                <translation transSpeed="0.3" transAcceleration="60" transMax="-0.635" transMin="-0.79" startTrans="-0.635" translationAxis="3" />					
+			</movingTool>	 
+			<movingTool node="0>0|6|4" playSound="true" wheelIndices="1 2">
+                <controls axis="AXIS_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="0.3" iconName="wheelBaseAxisUpandDown"  />
+                <translation transSpeed="0.5" transAcceleration="60" transMax="-1.148" transMin="-1.351" startTrans="-1.351" translationAxis="2" />					
+			</movingTool>			
+        </movingTools>
+        <sounds>
+            <hydraulic template="DEFAULT_SOWING_AIR_BLOWER" linkNode="Luft_achse"/>
+        </sounds>
+    </cylindered>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>          
+                <foldingParts startMoveDirection="1" posDirectionText="$l10n_action_closeBackDoor" negDirectionText="$l10n_action_openBackDoor">
+                    <foldingPart animationName="folding" speedScale="1" />                                    
+                </foldingParts>
+              </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="semitrailer" attacherHeight="1.33"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport" />
+        <brakeForce force="1.8"/>
+    </attachable>
+	
+    <ai>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2 3 4" width="2.7" height="4" length="13.9" lengthOffset="1.8"/>
+    </ai>
+
+    <wearable wearDuration="420" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+	
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulic01" length="1.9" diameter="0.02" />
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulic02" length="1.9" diameter="0.02" />
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" />
+         <hose inputAttacherJointIndices="1" type="electric" node="electric1" />       
+        <hose inputAttacherJointIndices="1" type="airDoubleRed" node="airRed" />
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airYellow" />
+    </connectionHoses>
+	
+    <lights>
+        <sharedLight linkNode="sideMarker03_left"     filename="$data/shared/assets/lights/lizard/sideMarker03_left.xml" />
+        <sharedLight linkNode="sideMarker03_right"    filename="$data/shared/assets/lights/lizard/sideMarker03_right.xml" />
+        <sharedLight linkNode="sideMarker08Red_01" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_02" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_03" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_04" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_05" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_06" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_07" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_08" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_09" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_10" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_11" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_12" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_13" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="sideMarker08Red_14" filename="Lights/sideMarker08Red.xml" />
+        <sharedLight linkNode="rearLight32_right" filename="$data/shared/assets/lights/lizard/rearLight32_right.xml" /> 
+        <sharedLight linkNode="rearLight32_left" filename="$data/shared/assets/lights/lizard/rearLight32_left.xml" />              
+        <sharedLight linkNode="hellaWorkingLightSquare_01"  filename="$data/shared/assets/lights/hella/hellaWorkingLightSquare_01_reverse.xml" >
+            <rotationNode name="rotationNode1" rotation="-62 0 0"/>
+        </sharedLight>
+        <sharedLight linkNode="hellaWorkingLightSquare_01_1"  filename="$data/shared/assets/lights/hella/hellaWorkingLightSquare_01_reverse.xml" >
+            <rotationNode name="rotationNode1" rotation="-62 0 0"/>
+        </sharedLight>
+        <realLights>
+            <high>
+                <light node="backLightsHigh1"   lightTypes="0" />
+                <light node="licensePlateLightHigh"   lightTypes="0" />
+                <brakeLight node="backLightsHigh1" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+                <reverseLight node="reverseLightHigh1" />
+            </high>
+        </realLights>
+    </lights>
+
+    <licensePlates>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="ELONGATED" placementArea="0.055 0.255 0.055 0.255" frame="false"/>
+    </licensePlates>
+
+    <tensionBelts>
+        <tensionBeltsConfigurations>
+            <tensionBeltsConfiguration>
+                <tensionBelts linkNode="tensionBelts" jointNode="KoegelBlackEdition_mainComponent" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0.1" defaultOffsetSide="0.1" defaultHeight="4" activationTrigger="beltActivationTrigger">
+                    <tensionBelt startNode="startPoint01" endNode="startPoint01End" offsetLeft="0.2">
+                        <intersectionNode node="startPoint01Intersection01"/>
+                        <intersectionNode node="startPoint01Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint02" endNode="startPoint02End">
+                        <intersectionNode node="startPoint02Intersection01"/>
+                        <intersectionNode node="startPoint02Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint03" endNode="startPoint03End">
+                        <intersectionNode node="startPoint03Intersection01"/>
+                        <intersectionNode node="startPoint03Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint04" endNode="startPoint04End">
+                        <intersectionNode node="startPoint04Intersection01"/>
+                        <intersectionNode node="startPoint04Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint05" endNode="startPoint05End">
+                        <intersectionNode node="startPoint05Intersection01"/>
+                        <intersectionNode node="startPoint05Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint06" endNode="startPoint06End">
+                        <intersectionNode node="startPoint06Intersection01"/>
+                        <intersectionNode node="startPoint06Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint07" endNode="startPoint07End">
+                        <intersectionNode node="startPoint07Intersection01"/>
+                        <intersectionNode node="startPoint07Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint08" endNode="startPoint08End">
+                        <intersectionNode node="startPoint08Intersection01"/>
+                        <intersectionNode node="startPoint08Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint09" endNode="startPoint09End">
+                        <intersectionNode node="startPoint09Intersection01"/>
+                        <intersectionNode node="startPoint09Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint10" endNode="startPoint10End">
+                        <intersectionNode node="startPoint10Intersection01"/>
+                        <intersectionNode node="startPoint10Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint11" endNode="startPoint11End">
+                        <intersectionNode node="startPoint11Intersection01"/>
+                        <intersectionNode node="startPoint11Intersection02"/>
+                    </tensionBelt>
+                     <tensionBelt startNode="startPoint12" endNode="startPoint12End">
+                        <intersectionNode node="startPoint12Intersection01"/>
+                        <intersectionNode node="startPoint12Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint13" endNode="startPoint13End">
+                        <intersectionNode node="startPoint13Intersection01"/>
+                        <intersectionNode node="startPoint13Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint14" endNode="startPoint14End">
+                        <intersectionNode node="startPoint14Intersection01"/>
+                        <intersectionNode node="startPoint14Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint15" endNode="startPoint15End">
+                        <intersectionNode node="startPoint15Intersection01"/>
+                        <intersectionNode node="startPoint15Intersection02"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint16" endNode="startPoint16End">
+                        <intersectionNode node="startPoint16Intersection01"/>
+                        <intersectionNode node="startPoint16Intersection02"/>
+                    </tensionBelt>  
+                     <tensionBelt startNode="startPoint17" endNode="startPoint17End">
+                        <intersectionNode node="startPoint17Intersection01"/>
+                        <intersectionNode node="startPoint17Intersection02"/>
+                    </tensionBelt>                                     
+                    <sounds>
+                        <toggleBelt template="beltClose" />
+                        <addBelt template="beltOpen" />
+                        <removeBelt template="beltClose" />
+                    </sounds>
+                </tensionBelts>
+            </tensionBeltsConfiguration>
+        </tensionBeltsConfigurations>
+    </tensionBelts>
+
+    <foliageBending>
+        <bendingNode minX="-1.3" maxX="1.3" minZ="-6.9" maxZ="3.1" yOffset="0.5" />
+        <bendingNode minX="-1.32" maxX="1.32" minZ="3.05" maxZ="7" yOffset="1" />
+    </foliageBending>
+
+<i3dMappings>
+  <i3dMapping id="KoegelBlackEdition_mainComponent" node="0>" />
+  <i3dMapping id="KoegelBlackEdition" node="0>0" />
+  <i3dMapping id="hellaWorkingLightSquare_01" node="0>0|2|0|16" />
+  <i3dMapping id="hellaWorkingLightSquare_01_1" node="0>0|2|0|17" />
+  <i3dMapping id="rearLight32_right" node="0>0|2|0|18" />
+  <i3dMapping id="rearLight32_left" node="0>0|2|0|19" />
+  <i3dMapping id="backLights" node="0>0|2|0|20" />
+  <i3dMapping id="turnLights" node="0>0|2|0|21" />
+  <i3dMapping id="reverseLights" node="0>0|2|0|22" />
+  <i3dMapping id="plateNumberLight01_0" node="0>0|2|1" />
+  <i3dMapping id="plateNumberLight01_static_0" node="0>0|2|1|0" />
+  <i3dMapping id="plateNumberLight01_1" node="0>0|2|2" />
+  <i3dMapping id="plateNumberLight01_static_1" node="0>0|2|2|0" />
+  <i3dMapping id="licensePlateBack" node="0>0|2|3" />
+  <i3dMapping id="connectionHoses" node="0>0|5" />
+  <i3dMapping id="airYellow" node="0>0|5|0" />
+  <i3dMapping id="airRed" node="0>0|5|1" />
+  <i3dMapping id="isobus" node="0>0|5|2" />
+  <i3dMapping id="electric" node="0>0|5|3" />
+  <i3dMapping id="hydraulic01" node="0>0|5|4" />
+  <i3dMapping id="hydraulic02" node="0>0|5|5" />
+  <i3dMapping id="electric1" node="0>0|5|6" />
+  <i3dMapping id="WheelRightBack" node="0>0|6|0" />
+  <i3dMapping id="WheelRightFront" node="0>0|6|4|0" />
+  <i3dMapping id="WheelRightMiddle" node="0>0|6|1" />
+  <i3dMapping id="WheelLeftBack" node="0>0|6|2" />
+  <i3dMapping id="WheelLeftFront" node="0>0|6|4|1" />
+  <i3dMapping id="WheelLeftMiddle" node="0>0|6|3" />
+  <i3dMapping id="attacherJoint" node="0>0|8" />
+  <i3dMapping id="tensionBelts" node="0>0|9" />
+  <i3dMapping id="startPoint01" node="0>0|9|0" />
+  <i3dMapping id="startPoint01End" node="0>0|9|0|0" />
+  <i3dMapping id="startPoint01Intersection01" node="0>0|9|0|1" />
+  <i3dMapping id="startPoint01Intersection02" node="0>0|9|0|2" />
+  <i3dMapping id="startPoint02" node="0>0|9|1" />
+  <i3dMapping id="startPoint02End" node="0>0|9|1|0" />
+  <i3dMapping id="startPoint02Intersection01" node="0>0|9|1|1" />
+  <i3dMapping id="startPoint02Intersection02" node="0>0|9|1|2" />
+  <i3dMapping id="startPoint03" node="0>0|9|2" />
+  <i3dMapping id="startPoint03End" node="0>0|9|2|0" />
+  <i3dMapping id="startPoint03Intersection01" node="0>0|9|2|1" />
+  <i3dMapping id="startPoint03Intersection02" node="0>0|9|2|2" />
+  <i3dMapping id="startPoint04" node="0>0|9|3" />
+  <i3dMapping id="startPoint04End" node="0>0|9|3|0" />
+  <i3dMapping id="startPoint04Intersection01" node="0>0|9|3|1" />
+  <i3dMapping id="startPoint04Intersection02" node="0>0|9|3|2" />
+  <i3dMapping id="startPoint05" node="0>0|9|4" />
+  <i3dMapping id="startPoint05End" node="0>0|9|4|0" />
+  <i3dMapping id="startPoint05Intersection01" node="0>0|9|4|1" />
+  <i3dMapping id="startPoint05Intersection02" node="0>0|9|4|2" />
+  <i3dMapping id="startPoint06" node="0>0|9|5" />
+  <i3dMapping id="startPoint06End" node="0>0|9|5|0" />
+  <i3dMapping id="startPoint06Intersection01" node="0>0|9|5|1" />
+  <i3dMapping id="startPoint06Intersection02" node="0>0|9|5|2" />
+  <i3dMapping id="startPoint07" node="0>0|9|6" />
+  <i3dMapping id="startPoint07End" node="0>0|9|6|0" />
+  <i3dMapping id="startPoint07Intersection01" node="0>0|9|6|1" />
+  <i3dMapping id="startPoint07Intersection02" node="0>0|9|6|2" />
+  <i3dMapping id="startPoint08" node="0>0|9|7" />
+  <i3dMapping id="startPoint08End" node="0>0|9|7|0" />
+  <i3dMapping id="startPoint08Intersection01" node="0>0|9|7|1" />
+  <i3dMapping id="startPoint08Intersection02" node="0>0|9|7|2" />
+  <i3dMapping id="startPoint09" node="0>0|9|8" />
+  <i3dMapping id="startPoint09End" node="0>0|9|8|0" />
+  <i3dMapping id="startPoint09Intersection01" node="0>0|9|8|1" />
+  <i3dMapping id="startPoint09Intersection02" node="0>0|9|8|2" />
+  <i3dMapping id="startPoint10" node="0>0|9|9" />
+  <i3dMapping id="startPoint10End" node="0>0|9|9|0" />
+  <i3dMapping id="startPoint10Intersection01" node="0>0|9|9|1" />
+  <i3dMapping id="startPoint10Intersection02" node="0>0|9|9|2" />
+  <i3dMapping id="startPoint11" node="0>0|9|10" />
+  <i3dMapping id="startPoint11End" node="0>0|9|10|0" />
+  <i3dMapping id="startPoint11Intersection01" node="0>0|9|10|1" />
+  <i3dMapping id="startPoint11Intersection02" node="0>0|9|10|2" />
+  <i3dMapping id="beltActivationTrigger" node="0>0|9|17" />
+  <i3dMapping id="startPoint12" node="0>0|9|11" />
+  <i3dMapping id="startPoint12End" node="0>0|9|11|0" />
+  <i3dMapping id="startPoint12Intersection01" node="0>0|9|11|1" />
+  <i3dMapping id="startPoint12Intersection02" node="0>0|9|11|2" />
+  <i3dMapping id="startPoint13" node="0>0|9|12" />
+  <i3dMapping id="startPoint13End" node="0>0|9|12|0" />
+  <i3dMapping id="startPoint13Intersection01" node="0>0|9|12|1" />
+  <i3dMapping id="startPoint13Intersection02" node="0>0|9|12|2" />
+  <i3dMapping id="startPoint14" node="0>0|9|13" />
+  <i3dMapping id="startPoint14End" node="0>0|9|13|0" />
+  <i3dMapping id="startPoint14Intersection01" node="0>0|9|13|1" />
+  <i3dMapping id="startPoint14Intersection02" node="0>0|9|13|2" />
+  <i3dMapping id="startPoint15" node="0>0|9|14" />
+  <i3dMapping id="startPoint15End" node="0>0|9|14|0" />
+  <i3dMapping id="startPoint15Intersection01" node="0>0|9|14|1" />
+  <i3dMapping id="startPoint15Intersection02" node="0>0|9|14|2" />
+  <i3dMapping id="startPoint16" node="0>0|9|15" />
+  <i3dMapping id="startPoint16End" node="0>0|9|15|0" />
+  <i3dMapping id="startPoint16Intersection01" node="0>0|9|15|1" />
+  <i3dMapping id="startPoint16Intersection02" node="0>0|9|15|2" />
+  <i3dMapping id="startPoint17" node="0>0|9|16" />
+  <i3dMapping id="startPoint17End" node="0>0|9|16|0" />
+  <i3dMapping id="startPoint17Intersection01" node="0>0|9|16|1" />
+  <i3dMapping id="startPoint17Intersection02" node="0>0|9|16|2" />
+  <i3dMapping id="TensionBelt" node="0>0|12|0|0" />
+  <i3dMapping id="TensionBelt1" node="0>0|12|0|0|0" />
+  <i3dMapping id="Autoloader" node="0>0|13" />
+  <i3dMapping id="pickupTriggerLeft" node="0>0|13|0" />
+  <i3dMapping id="pickupTriggerRight" node="0>0|13|1" />
+  <i3dMapping id="triggerNode" node="0>0|13|2" />
+  <i3dMapping id="loadingBase" node="0>0|13|3" />
+    <i3dMapping id="Luft_achse" node="0>0|1|0" />
+   <i3dMapping id="sideMarker03_left" node="0>0|2|0|0" />
+  <i3dMapping id="sideMarker03_right" node="0>0|2|0|1" />
+  <i3dMapping id="sideMarker08Red_01" node="0>0|2|0|2" />
+  <i3dMapping id="sideMarker08Red_02" node="0>0|2|0|3" />
+  <i3dMapping id="sideMarker08Red_03" node="0>0|2|0|4" />
+  <i3dMapping id="sideMarker08Red_04" node="0>0|2|0|5" />
+  <i3dMapping id="sideMarker08Red_05" node="0>0|2|0|6" />
+  <i3dMapping id="sideMarker08Red_06" node="0>0|2|0|7" />
+  <i3dMapping id="sideMarker08Red_07" node="0>0|2|0|8" />
+  <i3dMapping id="sideMarker08Red_08" node="0>0|2|0|9" />
+  <i3dMapping id="sideMarker08Red_09" node="0>0|2|0|10" />
+  <i3dMapping id="sideMarker08Red_10" node="0>0|2|0|11" />
+  <i3dMapping id="sideMarker08Red_11" node="0>0|2|0|12" />
+  <i3dMapping id="sideMarker08Red_12" node="0>0|2|0|13" />
+  <i3dMapping id="sideMarker08Red_13" node="0>0|2|0|14" />
+  <i3dMapping id="sideMarker08Red_14" node="0>0|2|0|15" /> 
+  <i3dMapping id="rearLight32_right" node="0>0|2|0|18" />
+  <i3dMapping id="rearLight32_left" node="0>0|2|0|19" />
+  <i3dMapping id="backLights" node="0>0|2|0|20" />
+  <i3dMapping id="backLightsHigh1" node="0>0|2|0|20|0" />
+  <i3dMapping id="backLightsHigh2" node="0>0|2|0|20|0|0" />
+  <i3dMapping id="turnLights" node="0>0|2|0|21" />
+  <i3dMapping id="turnLightLeftBack" node="0>0|2|0|21|0" />
+  <i3dMapping id="turnLightRightBack" node="0>0|2|0|21|1" />
+  <i3dMapping id="reverseLights" node="0>0|2|0|22" />
+  <i3dMapping id="reverseLightHigh1" node="0>0|2|0|22|0" />
+  <i3dMapping id="reverseLightHigh2" node="0>0|2|0|22|0|0" />
+   <i3dMapping id="licensePlateLightHigh" node="0>0|2|0|23" />
+  <i3dMapping id="licensePlateLightHigh1" node="0>0|2|0|23|0" /> 
+        <i3dMapping id="wheelChock01_01" node="0>0|6|5" />
+        <i3dMapping id="wheelChock01_02" node="0>0|6|6" />      
+</i3dMappings>
+</vehicle>
