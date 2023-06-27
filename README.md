@@ -26,17 +26,7 @@ Auf die große Ladeläche passen maximal die folgenden Ladegüter (Autoload Vers
 
 - 40 Europaletten in normal oder Übergröße
 
-- 6 Rundballen Baumwolle
 
-- 14 180er Rundballen
-
-- 30 150er Rundballen oder 240er Quaderballen
-
-- 30 220er Quaderballen
-
-- 30 180er Quaderballen
-
-- 36 125er Rundballen
 
 Gewicht: 7,5 Tonnen
 
